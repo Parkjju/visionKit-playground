@@ -10,7 +10,8 @@ import VisionKit
 
 class ViewController: UIViewController {
     
-    
+    @IBOutlet weak var scanButton: UIButton!
+    @IBOutlet weak var imageVIew: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
