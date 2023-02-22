@@ -33,6 +33,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="SCAN 👀"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lue-JJ-JAS"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-zi-Vrv">
                                 <rect key="frame" x="138.66666666666666" y="792.66666666666663" width="116" height="26"/>
@@ -58,7 +61,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageVIew" destination="Zwg-1M-5eg" id="JiH-nQ-OXa"/>
+                        <outlet property="imageView" destination="Zwg-1M-5eg" id="6nJ-rs-eMP"/>
+                        <outlet property="pageControl" destination="Wnb-zi-Vrv" id="NOm-TX-zVp"/>
                         <outlet property="scanButton" destination="UPr-SG-3KF" id="nqf-wS-8e5"/>
                     </connections>
                 </viewController>
