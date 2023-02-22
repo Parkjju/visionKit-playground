@@ -13,13 +13,28 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var scanButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var pageControl: UIPageControl!
     
-    var images: Array<Any> = []
+    var images: Array<Any> = []{
+        didSet{
+            guard let pageVC = self.parent as? PageViewController else {
+                print("?")
+                return
+            }
+            
+            guard let scanResultViewController = pageVC.VCArray[1] as? ScanResultViewController else {
+                return
+            }
+            guard let imageData = images as? [UIImage] else{
+                return
+            }
+            scanResultViewController.imageData = imageData
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -44,8 +59,6 @@ extension ViewController: VNDocumentCameraViewControllerDelegate{
             images.append(image)
         }
         
-        pageControl.numberOfPages = images.count
-        pageControl.currentPage = 0
         imageView.image = (images[0] as! UIImage)
         
         controller.dismiss(animated: true)
