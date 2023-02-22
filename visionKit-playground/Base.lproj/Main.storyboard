@@ -1,24 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" id="BYZ-38-t0r" customClass="ViewController" customModule="visionKit_playground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receipt Scanner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c7-c4-0Vl">
+                                <rect key="frame" x="111.66666666666667" y="139" width="169.66666666666663" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zwg-1M-5eg">
+                                <rect key="frame" x="20" y="217.66666666666663" width="353" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="IRa-e3-UxK"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPr-SG-3KF">
+                                <rect key="frame" x="148" y="747.66666666666663" width="97" height="35"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SCAN 👀"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Wnb-zi-Vrv">
+                                <rect key="frame" x="138.66666666666666" y="792.66666666666663" width="116" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="Tgb-ML-cyI"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zwg-1M-5eg" secondAttribute="trailing" constant="20" id="0HY-Hp-gQy"/>
+                            <constraint firstItem="Zwg-1M-5eg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="43T-DZ-FWE"/>
+                            <constraint firstItem="0c7-c4-0Vl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8LB-V1-iAz"/>
+                            <constraint firstItem="0c7-c4-0Vl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ROq-6v-mAT"/>
+                            <constraint firstItem="UPr-SG-3KF" firstAttribute="top" secondItem="Zwg-1M-5eg" secondAttribute="bottom" constant="30" id="RWD-bL-mTR"/>
+                            <constraint firstItem="Wnb-zi-Vrv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bf5-Rw-Tf4"/>
+                            <constraint firstItem="UPr-SG-3KF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cW1-VP-cvY"/>
+                            <constraint firstItem="Zwg-1M-5eg" firstAttribute="top" secondItem="0c7-c4-0Vl" secondAttribute="bottom" constant="50" id="kSx-sR-hGa"/>
+                            <constraint firstItem="Wnb-zi-Vrv" firstAttribute="top" secondItem="UPr-SG-3KF" secondAttribute="bottom" constant="10" id="uQa-tM-kI8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageVIew" destination="Zwg-1M-5eg" id="JiH-nQ-OXa"/>
+                        <outlet property="scanButton" destination="UPr-SG-3KF" id="nqf-wS-8e5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="6.8702290076335872" y="4.9295774647887329"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
